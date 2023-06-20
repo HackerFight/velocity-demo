@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tools>
+    <toolbox scope="application">
+        <!-- 分别导入时间，集合，数学工具包，可以点进去看下这些类有哪些方法，属性，根据类别名就可以调用了 -->
+        <tool class="org.apache.velocity.tools.generic.DateTool"/>
+        <tool class="org.apache.velocity.tools.generic.MathTool"/>
+    </toolbox>
+    <toolbox scope="application">
+        <!--如果不配置stringsDelimiter， 那么默认也是按照逗号分割 -->
+        <tool class="org.apache.velocity.tools.generic.CollectionTool" stringsDelimiter=","/>
+    </toolbox>
+</tools>

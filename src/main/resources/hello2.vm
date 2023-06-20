@@ -1,0 +1,45 @@
+
+======================日期Tool===================
+
+$date
+$date.getDate()
+$date.long
+$date.getSystemTime()
+$date.format("yyyy-MM-dd")
+
+======================数学Tool===================
+$math.max($a, $b)
+$math.div($a, $b)
+$math.add($a, $b)
+$math.floor($math.div($a, $b))
+
+
+=====================集合Tool===================
+原始元素排序：
+#foreach($item in $persons)
+    ----> $item
+#end
+
+Collection tool 排序后：
+#set($ps = $collection.sort($persons))
+#foreach($it in $ps)
+    ----> $it
+#end
+
+按照年龄升序排序后：
+#set($users = $collection.sort($persons, "age:asc"))
+#foreach($u in $users)
+    ----> $u
+#end
+
+按照年龄升序,count降序排序后：
+#set($users = $collection.sort($persons, ["age:asc", "count:desc"]))
+#foreach($u in $users)
+----> $u
+#end
+
+字符串分割：
+#set($str = "hello veloctiy, good good study, day day up!")
+#foreach($x in $collection.split($str))
+    ----> $x
+#end

@@ -1,0 +1,11 @@
+
+#if($c == 15)
+    -----> hello: $!name
+#end
+
+#foreach($item in $list)
+    集合中的元素：${item} , 索引：【$foreach.index】
+#end
+
+$person.name 的 生日是 $person.birthday，年龄是 $person.getAge()
+
